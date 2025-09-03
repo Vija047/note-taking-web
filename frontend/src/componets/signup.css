@@ -1,0 +1,587 @@
+/* Mobile-first responsive design */
+* {
+    box-sizing: border-box;
+}
+
+.signup-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+.signup-form-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: white;
+}
+
+.image-section {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-section {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.signup-form,
+.otp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-input {
+    padding: 0.875rem 1rem;
+    border: 1.5px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #4285f4;
+    box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1);
+}
+
+.form-input:hover {
+    border-color: #c1c7cd;
+}
+
+/* Improve date input styling on mobile */
+.form-input[type="date"] {
+    position: relative;
+}
+
+.form-input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.submit-button {
+    padding: 0.875rem 2rem;
+    background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+    min-height: 44px;
+    /* Minimum touch target size */
+    touch-action: manipulation;
+    /* Prevents double-tap zoom */
+}
+
+.submit-button:hover:not(:disabled) {
+    background: linear-gradient(135deg, #1a73e8 0%, #1557b0 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+}
+
+.submit-button:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(66, 133, 244, 0.2);
+}
+
+.submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.secondary-button {
+    padding: 0.875rem 2rem;
+    background: transparent;
+    color: #4285f4;
+    border: 1.5px solid #4285f4;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+    min-height: 44px;
+    /* Minimum touch target size */
+    touch-action: manipulation;
+    /* Prevents double-tap zoom */
+}
+
+.secondary-button:hover {
+    background: #4285f4;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.secondary-button:active {
+    transform: translateY(0);
+    background: #1a73e8;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e1e5e9;
+}
+
+.divider span {
+    padding: 0 1rem;
+}
+
+/* Gmail Signup Button */
+.gmail-signup-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.875rem 2rem;
+    background: white;
+    color: #333;
+    border: 1.5px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-height: 44px;
+    touch-action: manipulation;
+}
+
+.gmail-signup-button:hover {
+    border-color: #4285f4;
+    box-shadow: 0 2px 8px rgba(66, 133, 244, 0.2);
+}
+
+.gmail-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* OTP Verification Section */
+.otp-verification-section {
+    text-align: center;
+}
+
+.otp-header {
+    margin-bottom: 2rem;
+}
+
+.otp-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: rgba(66, 133, 244, 0.1);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.otp-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.otp-header p {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.otp-input {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.25rem;
+}
+
+.otp-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.otp-actions .secondary-button,
+.otp-actions .resend-button {
+    flex: 1;
+    margin-top: 0;
+}
+
+.resend-button {
+    padding: 0.875rem 2rem;
+    background: transparent;
+    color: #4285f4;
+    border: 1.5px solid #4285f4;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-height: 44px;
+    touch-action: manipulation;
+}
+
+.resend-button:hover:not(:disabled) {
+    background: #4285f4;
+    color: white;
+}
+
+.resend-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.message {
+    padding: 0.875rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.signin-link {
+    text-align: center;
+    margin-top: 2rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.signin-link a {
+    color: #4285f4;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signin-link a:hover {
+    text-decoration: underline;
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: #4285f4;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.link-button:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+    .signup-form-section {
+        padding: 1.5rem;
+    }
+
+    .form-container {
+        max-width: 420px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .signup-container {
+        flex-direction: column;
+    }
+
+    .image-section {
+        display: none;
+    }
+
+    .signup-form-section {
+        padding: 1.5rem;
+        justify-content: flex-start;
+        padding-top: 2rem;
+    }
+
+    .logo-section {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 2rem;
+        align-self: flex-start;
+    }
+
+    .form-container {
+        max-width: 100%;
+    }
+
+    .form-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .signup-container {
+        min-height: 100vh;
+    }
+
+    .image-section {
+        display: none;
+    }
+
+    .signup-form-section {
+        padding: 1rem;
+        padding-top: 1.5rem;
+    }
+
+    .logo-section {
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .form-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .form-subtitle {
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .signup-form,
+    .otp-form {
+        gap: 1.25rem;
+    }
+
+    .form-input {
+        padding: 0.75rem;
+        font-size: 16px;
+        /* Prevents zoom on iOS */
+    }
+
+    .submit-button,
+    .secondary-button {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .message {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .signin-link {
+        margin-top: 1.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+    .signup-form-section {
+        padding: 0.75rem;
+        padding-top: 1rem;
+    }
+
+    .image-section {
+        display: none;
+    }
+
+    .form-title {
+        font-size: 1.375rem;
+    }
+
+    .logo-section {
+        margin-bottom: 1rem;
+    }
+
+    .signup-form,
+    .otp-form {
+        gap: 1rem;
+    }
+
+    .form-input {
+        padding: 0.625rem;
+    }
+
+    .submit-button,
+    .secondary-button {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .signup-container {
+        flex-direction: row;
+    }
+
+    .image-section {
+        height: 100vh;
+        order: 0;
+        flex: 0.4;
+    }
+
+    .signup-form-section {
+        flex: 0.6;
+        padding: 1rem;
+        justify-content: center;
+    }
+
+    .logo-section {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        margin-bottom: 0;
+    }
+
+    .form-container {
+        max-width: 350px;
+    }
+
+    .form-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .form-subtitle {
+        margin-bottom: 1rem;
+    }
+
+    .signup-form,
+    .otp-form {
+        gap: 1rem;
+    }
+}
+
+/* Loading animation */
+.submit-button:disabled::after {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left: 8px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

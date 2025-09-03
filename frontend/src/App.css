@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+.app {
+    min-height: 100vh;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: transparent;
+    color: #666;
+}
+
+.nav-button:hover {
+    background: #f5f5f5;
+    color: #333;
+}
+
+.nav-button.active {
+    background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(66, 133, 244, 0.3);
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        position: relative;
+        top: 0;
+        right: 0;
+        justify-content: center;
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+}
