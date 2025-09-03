@@ -2,7 +2,7 @@
 
 A full-stack note-taking web application built with React (frontend) and Node.js (backend). This application allows users to create, manage, and organize their notes with features like user authentication, tagging, color coding, and search functionality.
 
-## 🚀 Features
+##  Features
 
 ### Frontend (React + Vite)
 - Modern React application with Vite for fast development
@@ -19,7 +19,7 @@ A full-stack note-taking web application built with React (frontend) and Node.js
 - Comprehensive note management system
 - Search and filtering capabilities
 
-## 📋 Prerequisites
+##  Prerequisites
 
 Before you begin, ensure you have the following installed on your system:
 
@@ -28,7 +28,7 @@ Before you begin, ensure you have the following installed on your system:
 - [MongoDB](https://www.mongodb.com/) (local installation or MongoDB Atlas account)
 - [Git](https://git-scm.com/)
 
-## 🛠️ Installation & Setup
+##  Installation & Setup
 
 ### 1. Clone the Repository
 
@@ -98,7 +98,7 @@ npm run dev
 
 The frontend development server will start on `http://localhost:5173`
 
-## 🔧 Available Scripts
+##  Available Scripts
 
 ### Backend Scripts
 - `npm start` - Start the production server
@@ -111,7 +111,7 @@ The frontend development server will start on `http://localhost:5173`
 - `npm run preview` - Preview the production build
 - `npm run lint` - Run ESLint for code linting
 
-## 🏗️ Building for Production
+##  Building for Production
 
 ### Backend Production Build
 
@@ -135,7 +135,7 @@ To preview the production build:
 npm run preview
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 note-taking-web/
@@ -173,14 +173,14 @@ note-taking-web/
     └── vercel.json         # Vercel deployment config
 ```
 
-## 🔄 Development Workflow
+##  Development Workflow
 
 1. **Start Backend**: Run `npm run dev` in the `backend` directory
 2. **Start Frontend**: Run `npm run dev` in the `frontend` directory
 3. **Make Changes**: Edit files and see changes reflected automatically
 4. **Test API**: Use tools like Postman or the frontend interface to test functionality
 
-## 🚀 Deployment
+##  Deployment
 
 ### Backend Deployment (Vercel)
 
@@ -195,7 +195,7 @@ The backend includes a `vercel.json` configuration file for easy deployment to V
 1. Build the project: `npm run build`
 2. Deploy the `dist` folder to Vercel or any static hosting service
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -222,7 +222,7 @@ If you encounter any issues:
 3. Verify your environment configuration
 4. Check if all services (MongoDB, Node.js) are running
 
-## 📝 API Documentation
+##  API Documentation
 
 The backend provides a RESTful API with the following main endpoints:
 
@@ -238,22 +238,10 @@ The backend provides a RESTful API with the following main endpoints:
   - `DELETE /api/notes/:id` - Delete a note
   - `GET /api/notes/search` - Search notes
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature-name`
 3. Make your changes and commit: `git commit -m 'Add feature'`
 4. Push to the branch: `git push origin feature-name`
 5. Submit a pull request
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 👥 Authors
-
-- **Vija047** - [GitHub Profile](https://github.com/Vija047)
-
----
-
-**Happy Note Taking! 📝**
